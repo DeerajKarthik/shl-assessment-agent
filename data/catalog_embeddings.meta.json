@@ -3,5 +3,5 @@
   "model": "BAAI/bge-small-en-v1.5",
   "dimension": 384,
   "rows": 377,
-  "matrix_sha256": "61c29910bff1468f8cd4f9631013df48f9f69f32764b12baa0c84c3c8d40b051"
+  "matrix_sha256": "3687316377a35abb4ba75d6a715f0e26cb0f8391a14b8f6d37bc78b3bec1f6e4"
 }

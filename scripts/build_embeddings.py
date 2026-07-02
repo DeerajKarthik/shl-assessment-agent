@@ -49,7 +49,7 @@ def main() -> None:
             else:
                 batch_texts.append(item.search_text)
 
-        embeddings = model.encode(batch_texts)
+        embeddings = model.encode(batch_texts, normalize_embeddings=True)
         vectors.extend(embeddings.tolist())
         
         done = min(start + len(batch), total)

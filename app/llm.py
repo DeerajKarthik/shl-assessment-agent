@@ -79,7 +79,7 @@ class GeminiAdapter:
             elif "nomic" in self.settings.embedding_model.lower():
                 prefix = "search_query: "
                 
-            embedding = self._st_model.encode(f"{prefix}{text}")
+            embedding = self._st_model.encode(f"{prefix}{text}", normalize_embeddings=True)
             return np.asarray(embedding, dtype=np.float32)
         if not self.enabled or types is None:
             return None
