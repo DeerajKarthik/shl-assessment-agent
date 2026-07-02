@@ -28,5 +28,5 @@ ENV PORT=8080 \
 HEALTHCHECK --interval=30s --timeout=5s --start-period=30s --retries=3 \
     CMD python -c "import os; import urllib.request; urllib.request.urlopen(f'http://127.0.0.1:{os.environ.get(\"PORT\", \"8080\")}/health')" || exit 1
 
-# Use $PORT environment variable so Railway/Docker can override it
-CMD ["sh", "-c", "python -m uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8080} --workers 1 --timeout-keep-alive 30"]
+# Use Docker's native shell form to ensure $PORT is evaluated correctly by /bin/sh
+CMD uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8080} --workers 1 --timeout-keep-alive 30
