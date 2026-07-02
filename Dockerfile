@@ -9,6 +9,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy application code and data
 COPY app/ app/
 COPY data/ data/
+COPY static/ static/
 COPY evaluation/ evaluation/
 COPY pyproject.toml .
 COPY run.py .

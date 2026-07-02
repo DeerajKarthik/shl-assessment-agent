@@ -9,3 +9,4 @@ scikit-learn==1.7.2
 uvicorn[standard]==0.34.0
 mistralai>=1.0.0
 sentence-transformers>=3.0.0
+einops>=0.8.0
