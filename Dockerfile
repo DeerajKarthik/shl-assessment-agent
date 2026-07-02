@@ -10,7 +10,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY app/ app/
 COPY data/ data/
 COPY evaluation/ evaluation/
-COPY shl_product_catalog.json .
 COPY pyproject.toml .
 
 # Pre-compile Python files for faster startup
