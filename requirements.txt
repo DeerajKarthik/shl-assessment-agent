@@ -7,3 +7,5 @@ python-dotenv==1.1.0
 rank-bm25==0.2.2
 scikit-learn==1.7.2
 uvicorn[standard]==0.34.0
+mistralai>=1.0.0
+sentence-transformers>=3.0.0
