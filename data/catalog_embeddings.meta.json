@@ -1,7 +1,7 @@
 {
   "catalog_sha256": "cdb539df8979610b82d2ff23e17c7abbac72b6d933b953b0087c7cac5f585190",
-  "model": "nomic-ai/nomic-embed-text-v1.5",
-  "dimension": 768,
+  "model": "BAAI/bge-small-en-v1.5",
+  "dimension": 384,
   "rows": 377,
-  "matrix_sha256": "227a8d8b70a6941e7b197ba867a24f56a8469e699ee9b3871e90fc2b80112b14"
+  "matrix_sha256": "61c29910bff1468f8cd4f9631013df48f9f69f32764b12baa0c84c3c8d40b051"
 }

@@ -34,7 +34,7 @@ class Settings:
     cerebras_api_key: str | None = os.getenv("CEREBRAS_API_KEY") or None
     mistral_api_key: str | None = os.getenv("MISTRAL_API_KEY") or None
     model_name: str = os.getenv("MODEL_NAME", "mistral-medium-latest")
-    embedding_model: str = os.getenv("EMBEDDING_MODEL", "nomic-ai/nomic-embed-text-v1.5")
+    embedding_model: str = os.getenv("EMBEDDING_MODEL", "BAAI/bge-small-en-v1.5")
     gemini_timeout_seconds: float = float(os.getenv("GEMINI_TIMEOUT_SECONDS", "28.0"))
     application_timeout_seconds: float = float(
         os.getenv("APPLICATION_TIMEOUT_SECONDS", "30")

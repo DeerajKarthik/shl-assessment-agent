@@ -68,14 +68,19 @@ class GeminiAdapter:
         return self.mistral_client is not None
 
     async def embed_query(self, text: str) -> np.ndarray | None:
-        if "nomic" in self.settings.embedding_model:
+        if "nomic" in self.settings.embedding_model or "bge" in self.settings.embedding_model or "sentence-transformers" in self.settings.embedding_model:
             from sentence_transformers import SentenceTransformer
             if not hasattr(self, "_st_model"):
                 self._st_model = SentenceTransformer(self.settings.embedding_model, trust_remote_code=True)
-            # Nomic expects search_query: prefix
-            embedding = self._st_model.encode(f"search_query: {text}")
-            return np.asarray(embedding, dtype=np.float32)
             
+            prefix = ""
+            if "bge" in self.settings.embedding_model.lower():
+                prefix = "Represent this sentence for searching relevant passages: "
+            elif "nomic" in self.settings.embedding_model.lower():
+                prefix = "search_query: "
+                
+            embedding = self._st_model.encode(f"{prefix}{text}")
+            return np.asarray(embedding, dtype=np.float32)
         if not self.enabled or types is None:
             return None
         try:

@@ -21,8 +21,8 @@ def main() -> None:
     parser.add_argument("--catalog", default="shl_product_catalog.json")
     parser.add_argument("--output", default="data/catalog_embeddings.npy")
     parser.add_argument("--metadata", default="data/catalog_embeddings.meta.json")
-    parser.add_argument("--model", default="nomic-ai/nomic-embed-text-v1.5")
-    parser.add_argument("--dimension", type=int, default=768)
+    parser.add_argument("--model", default="BAAI/bge-small-en-v1.5")
+    parser.add_argument("--dimension", type=int, default=384)
     parser.add_argument("--batch-size", type=int, default=32)
     args = parser.parse_args()
 
@@ -42,8 +42,12 @@ def main() -> None:
 
     for start in range(0, total, batch_size):
         batch = catalog.items[start : start + batch_size]
-        # For Nomic, documents should be prefixed with 'search_document: '
-        batch_texts = ["search_document: " + item.search_text for item in batch]
+        batch_texts = []
+        for item in batch:
+            if "nomic" in args.model.lower():
+                batch_texts.append("search_document: " + item.search_text)
+            else:
+                batch_texts.append(item.search_text)
 
         embeddings = model.encode(batch_texts)
         vectors.extend(embeddings.tolist())
