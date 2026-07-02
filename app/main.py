@@ -6,6 +6,7 @@ from pathlib import Path
 
 from fastapi import FastAPI, Request, Response
 from fastapi.responses import HTMLResponse
+from fastapi.middleware.cors import CORSMiddleware
 
 ROOT = Path(__file__).parent.parent
 
@@ -35,6 +36,13 @@ app = FastAPI(
     redoc_url=None,
     openapi_url=None,
     lifespan=lifespan,
+)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 
