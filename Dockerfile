@@ -21,6 +21,10 @@ RUN python -m compileall -q app/ evaluation/
 RUN useradd --create-home appuser
 USER appuser
 
+# Pre-download the heavy Nomic embedding model into the container cache 
+# so it doesn't download at runtime (which causes OOM or timeouts)
+RUN python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('nomic-ai/nomic-embed-text-v1.5', trust_remote_code=True)"
+
 EXPOSE ${PORT:-8080}
 
 ENV PORT=8080 \
