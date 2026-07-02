@@ -1,0 +1,7 @@
+{
+  "catalog_sha256": "cdb539df8979610b82d2ff23e17c7abbac72b6d933b953b0087c7cac5f585190",
+  "model": "nomic-ai/nomic-embed-text-v1.5",
+  "dimension": 768,
+  "rows": 377,
+  "matrix_sha256": "227a8d8b70a6941e7b197ba867a24f56a8469e699ee9b3871e90fc2b80112b14"
+}

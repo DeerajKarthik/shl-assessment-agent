@@ -1,0 +1,242 @@
+[
+  {
+    "name": "executive leadership",
+    "all": [
+      "leadership"
+    ],
+    "any": [
+      "senior",
+      "executive",
+      "director",
+      "cxo",
+      "selection",
+      "c-suite"
+    ],
+    "entity_ids": [
+      "720",
+      "4289",
+      "749"
+    ]
+  },
+  {
+    "name": "contact center",
+    "all": [],
+    "any": [
+      "contact center",
+      "contact centre",
+      "inbound calls",
+      "call center",
+      "call centre",
+      "call support",
+      "inbound support",
+      "help desk",
+      "customer representative",
+      "customer support",
+      "helpdesk"
+    ],
+    "entity_ids": [
+      "3987",
+      "4189",
+      "3939",
+      "3933"
+    ]
+  },
+  {
+    "name": "graduate finance",
+    "all": [
+      "graduate"
+    ],
+    "any": [
+      "finance",
+      "financial analyst",
+      "accounting"
+    ],
+    "entity_ids": [
+      "3946",
+      "3992",
+      "4149"
+    ]
+  },
+  {
+    "name": "sales development",
+    "all": [
+      "sales"
+    ],
+    "any": [
+      "reskill",
+      "re-skill",
+      "talent audit",
+      "restructuring",
+      "development"
+    ],
+    "entity_ids": [
+      "4301",
+      "4302",
+      "4283"
+    ]
+  },
+  {
+    "name": "industrial safety",
+    "all": [],
+    "any": [
+      "plant operator",
+      "chemical facility",
+      "industrial safety",
+      "procedure compliance"
+    ],
+    "entity_ids": [
+      "731",
+      "4293",
+      "4068"
+    ]
+  },
+  {
+    "name": "healthcare administration",
+    "all": [],
+    "any": [
+      "healthcare admin",
+      "patient records",
+      "hipaa",
+      "medical admin",
+      "medical office",
+      "clinic",
+      "reception",
+      "patient records",
+      "medical receptionist",
+      "health information",
+      "emr",
+      "ehr",
+      "hospital administration"
+    ],
+    "entity_ids": [
+      "331",
+      "4058",
+      "731",
+      "720",
+      "4211",
+      "4210",
+      "3994",
+      "3993"
+    ]
+  },
+  {
+    "name": "office administration",
+    "all": [],
+    "any": [
+      "admin assistant",
+      "administrative assistant"
+    ],
+    "entity_ids": [
+      "3993",
+      "3994"
+    ]
+  },
+  {
+    "name": "java development",
+    "all": [
+      "java"
+    ],
+    "any": [
+      "spring",
+      "backend",
+      "microservice",
+      "full stack",
+      "full-stack",
+      "enterprise",
+      "beans",
+      "advanced"
+    ],
+    "entity_ids": [
+      "4034",
+      "4143"
+    ]
+  },
+  {
+    "name": "cashier retail",
+    "all": [],
+    "any": [
+      "cashier",
+      "checkout staff",
+      "checkout",
+      "store checkout",
+      "handle money"
+    ],
+    "entity_ids": []
+  },
+  {
+    "name": "retail sales simulation",
+    "all": [],
+    "any": [
+      "boutique",
+      "retail sales",
+      "selling things",
+      "shop assistant",
+      "store assistant"
+    ],
+    "entity_ids": []
+  },
+  {
+    "name": "core_cognitive",
+    "all": [],
+    "any": [
+      "cognitive",
+      "ability",
+      "reasoning",
+      "logic",
+      "graduates"
+    ],
+    "entity_ids": [
+      "4237",
+      "4149"
+    ]
+  },
+  {
+    "name": "core_personality",
+    "all": [],
+    "any": [
+      "senior",
+      "manager",
+      "executive",
+      "director",
+      "personality",
+      "behavioral",
+      "cultural fit",
+      "leadership"
+    ],
+    "entity_ids": [
+      "720"
+    ]
+  },
+  {
+    "name": "senior engineering",
+    "all": [],
+    "any": [
+      "engineer",
+      "networking infrastructure",
+      "rust"
+    ],
+    "entity_ids": [
+      "4218",
+      "205"
+    ]
+  },
+  {
+    "name": "software engineering flagship",
+    "all": [],
+    "any": [
+      "backend",
+      "software engineer",
+      "java developer",
+      "full stack",
+      "programmer",
+      "java",
+      "spring",
+      "rest",
+      "microservices"
+    ],
+    "entity_ids": [
+      "720",
+      "3971"
+    ]
+  }
+]
